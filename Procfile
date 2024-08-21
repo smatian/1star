@@ -1,1 +1,1 @@
-web: mitmproxy -s mitm_script.py
+web: mitmdump -s mitm_script.py
