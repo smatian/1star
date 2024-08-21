@@ -1,1 +1,1 @@
-web: mitmdump -s mitm_script.py
+web: mitmdump -p $PORT -s mitm_script.py
