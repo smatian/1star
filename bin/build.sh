@@ -7,4 +7,4 @@ curl -sSL https://snapshots.mitmproxy.org/5.2/mitmproxy-5.2-linux.tar.gz | tar x
 mv mitmproxy /app/.heroku/python/bin/
 
 # Copy the script to the bin folder
-cp your_script.py /app/.heroku/python/bin/
+cp mitm_script.py /app/.heroku/python/bin/
