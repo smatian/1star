@@ -31,6 +31,13 @@ def response(flow: http.HTTPFlow) -> None:
         "https://api.5starstudents.com/person/identity",
         "https://api.5starstudents.com/configuration/5f9274c6e5f245bfbfe59c92345bcb5f"
     ]
+    # Define the IP address to ignore
+    ip_to_ignore = "3.107.45.216"
+    
+    # Check if the request comes from the specific IP
+    if flow.client_conn.address[0] == ip_to_ignore:
+        # Do not process further
+        flow.kill()
 
     # Check if the request URL is in the list of URLs to intercept
     if flow.request.pretty_url not in urls_to_intercept:
