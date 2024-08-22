@@ -33,7 +33,7 @@ def response(flow: http.HTTPFlow) -> None:
     ]
     # Define the IP address to ignore
     ip_to_ignore = "3.107.45.216"
-    flow.client_conn.address[0]
+    print(flow.client_conn.address[0])
     
     
     # Check if the request comes from the specific IP
